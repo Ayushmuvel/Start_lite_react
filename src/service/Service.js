@@ -47,10 +47,10 @@ const Service = () => {
             <div className="row">
               {services_lis.map((service) => {
                 return (
-                  <Service_content
+                  <ServiceContent
                     key={service.id}
                     {...service}
-                  ></Service_content>
+                  ></ServiceContent>
                 );
               })}
             </div>
@@ -66,7 +66,7 @@ const Service = () => {
   );
 };
 
-const Service_content = (props) => {
+const ServiceContent = (props) => {
   const { id, class_name, service_title, text } = props;
   console.log(id);
   return (

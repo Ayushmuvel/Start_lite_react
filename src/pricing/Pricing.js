@@ -56,9 +56,7 @@ const Pricing = () => {
         </div>
         <div className="row justify-content-center">
           {price_lis.map((each_price) => {
-            return (
-              <Price_comp key={each_price.id} {...each_price}></Price_comp>
-            );
+            return <PriceComp key={each_price.id} {...each_price}></PriceComp>;
           })}
         </div>
       </div>
@@ -66,19 +64,8 @@ const Pricing = () => {
   );
 };
 
-const Price_comp = (props) => {
-  const {
-    id,
-    main_class,
-    img_class,
-    img_src,
-    img_alt,
-    sub_class,
-    sun_title,
-    price,
-    year,
-    styl_color,
-  } = props;
+const PriceComp = (props) => {
+  const { main_class, sub_class, sun_title, price, year } = props;
   return (
     <div className="col-lg-4 col-md-7 col-sm-9">
       <div className={main_class}>
@@ -107,7 +94,7 @@ const Price_comp = (props) => {
           </ul>
         </div>
         <div className={sub_class}>
-          <a className="main-btn" href="#">
+          <a className="main-btn" href="http://localhost:3000/">
             GET STARTED
           </a>
         </div>
@@ -162,7 +149,7 @@ const Price_comp = (props) => {
 const Image = (props) => {
   const { img_class, img_alt, img_src } = props;
   console.log(img_class);
-  if (img_class == "") {
+  if (img_class === "") {
     return <></>;
   }
   return (

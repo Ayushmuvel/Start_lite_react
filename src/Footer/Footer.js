@@ -6,9 +6,9 @@ const link_list = [
     main_class: "col-lg-2 col-md-4 col-sm-6",
     main_title: "Company",
     sub_list: [
-      { id: 1, name: "About", link: "#" },
-      { id: 2, name: "Contact", link: "#" },
-      { id: 3, name: "Career", link: "#" },
+      { id: 1, name: "About", link: "http://localhost:3000/" },
+      { id: 2, name: "Contact", link: "http://localhost:3000/" },
+      { id: 3, name: "Career", link: "http://localhost:3000/" },
     ],
   },
   {
@@ -16,9 +16,9 @@ const link_list = [
     main_class: "col-lg-3 col-md-4 col-sm-6",
     main_title: "Product & Services",
     sub_list: [
-      { id: 1, name: "Products", link: "#" },
-      { id: 2, name: "Business", link: "#" },
-      { id: 3, name: "Developer", link: "#" },
+      { id: 1, name: "Products", link: "http://localhost:3000/" },
+      { id: 2, name: "Business", link: "http://localhost:3000/" },
+      { id: 3, name: "Developer", link: "http://localhost:3000/" },
     ],
   },
   {
@@ -26,9 +26,9 @@ const link_list = [
     main_class: "col-lg-3 col-md-4 col-sm-5",
     main_title: "Help & Suuport",
     sub_list: [
-      { id: 1, name: "Support Center", link: "#" },
-      { id: 2, name: "FAQ", link: "#" },
-      { id: 3, name: "Terms & Conditions", link: "#" },
+      { id: 1, name: "Support Center", link: "http://localhost:3000/" },
+      { id: 2, name: "FAQ", link: "http://localhost:3000/" },
+      { id: 3, name: "Terms & Conditions", link: "http://localhost:3000/" },
     ],
   },
 ];
@@ -48,22 +48,22 @@ const Footer = () => {
 
                   <ul className="social mt-30">
                     <li>
-                      <a href="#">
+                      <a href="http://localhost:3000/">
                         <i className="lni-facebook-filled"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="http://localhost:3000/">
                         <i className="lni-twitter-original"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="http://localhost:3000/">
                         <i className="lni-instagram-original"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="http://localhost:3000/">
                         <i className="lni-linkedin-original"></i>
                       </a>
                     </li>
@@ -74,13 +74,13 @@ const Footer = () => {
           </div>
           <div className="row">
             {link_list.map((link) => {
-              return <Add_footer key={link.id} {...link} />;
+              return <AddFooter key={link.id} {...link} />;
             })}
             <div className="col-lg-4 col-md-6 col-sm-7">
               <div className="footer-newsletter">
                 <h6 className="footer-title">Subscribe Newsletter</h6>
                 <div className="newsletter">
-                  <form action="#">
+                  <form action="http://localhost:3000/">
                     <input type="text" placeholder="Your Email" />
                     <button type="submit">
                       <i className="lni-angle-double-right"></i>
@@ -123,15 +123,15 @@ const Footer = () => {
 
 export default Footer;
 
-const Add_footer = (props) => {
-  const { id, main_class, main_title, sub_list } = props;
+const AddFooter = (props) => {
+  const { main_class, main_title, sub_list } = props;
   return (
     <div className={main_class}>
       <div className="footer-link">
         <h6 className="footer-title">{main_title}</h6>
         <ul>
           {sub_list.map((item) => {
-            return <Add_links key={item.id} {...item} />;
+            return <AddLinks key={item.id} {...item} />;
           })}
         </ul>
       </div>
@@ -139,8 +139,8 @@ const Add_footer = (props) => {
   );
 };
 
-const Add_links = (props) => {
-  const { id, name, link } = props;
+const AddLinks = (props) => {
+  const { name, link } = props;
   return (
     <li>
       <a href={link}>{name}</a>

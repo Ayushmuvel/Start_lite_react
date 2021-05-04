@@ -3,7 +3,7 @@ import React from "react";
 const Nav_bar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
-      <a className="navbar-brand" href="#">
+      <a className="navbar-brand" href="http://localhost:3000">
         <img src="assets/images/logo.svg" alt="Logo" />
       </a>
 
@@ -50,22 +50,22 @@ const Nav_bar = () => {
         <span>FOLLOW US</span>
         <ul>
           <li>
-            <a href="#">
+            <a href="http://localhost:3000">
               <i className="lni-facebook-filled"></i>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="http://localhost:3000/">
               <i className="lni-twitter-original"></i>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="http://localhost:3000/">
               <i className="lni-instagram-original"></i>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="http://localhost:3000/">
               <i className="lni-linkedin-original"></i>
             </a>
           </li>

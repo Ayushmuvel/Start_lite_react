@@ -4,7 +4,7 @@ import reactDom from "react-dom";
 import Header from "./Head/Head";
 import Service from "./service/Service";
 import Pricing from "./pricing/Pricing";
-import Call_to_action from "./call_to_action/Call_to_action";
+import CallToAction from "./call_to_action/Call_to_action";
 import Content from "./content/Content";
 import Footer from "./Footer/Footer";
 
@@ -14,7 +14,7 @@ const Index = () => {
       <Header />
       <Service />
       <Pricing />
-      <Call_to_action />
+      <CallToAction />
       <Content />
       <Footer />
     </div>

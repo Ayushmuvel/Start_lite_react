@@ -21,7 +21,7 @@ const Home = () => {
               </p>
               <ul className="header-btn">
                 <li>
-                  <a className="main-btn btn-one" href="#">
+                  <a className="main-btn btn-one" href="http://localhost:3000/">
                     GET IN TOUCH
                   </a>
                 </li>

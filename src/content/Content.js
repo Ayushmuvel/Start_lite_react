@@ -71,7 +71,7 @@ const Content = () => {
               >
                 <div className="row">
                   {input_lis.map((inp) => {
-                    return <Input_component key={inp.id} {...inp} />;
+                    return <InputComponent key={inp.id} {...inp} />;
                   })}
                 </div>
               </form>
@@ -85,10 +85,10 @@ const Content = () => {
 
 export default Content;
 
-const Input_component = (props) => {
+const InputComponent = (props) => {
   const { in_type, in_name, in_placeholder, in_data_err } = props;
   console.log(in_type);
-  if (in_type == "button") {
+  if (in_type === "button") {
     return (
       <>
         <p className="form-message"></p>
@@ -102,7 +102,7 @@ const Input_component = (props) => {
       </>
     );
   }
-  if (in_type == "text_area") {
+  if (in_type === "text_area") {
     return (
       <div className="col-md-12">
         <div className="single-form form-group">
